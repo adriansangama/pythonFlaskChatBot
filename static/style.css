@@ -1,0 +1,82 @@
+body {
+  background-color: #30302B;
+}
+.container {
+  max-width: 768px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.card {
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  background-color: #88888E;
+}
+.card-header {
+  background-color: #424148;
+  color: #fff;
+}
+.card-body.chat-box {
+  padding: 20px;
+  overflow-y: scroll;
+  height: 300px;
+}
+
+.message-bubble.me {
+  background-color: #3f51b5;
+  color: white;
+  border-radius: 20px 20px 0px 20px;
+  padding: 10px;
+  max-width: 100%;
+  margin-bottom: 10px;
+  align-self: flex-end;
+}
+.message-bubble.ai {
+  background-color: #f1f0f0;
+  color: black;
+  border-radius: 20px 20px 20px 0px;
+  padding: 10px;
+  max-width: 100%;
+  margin-bottom: 10px;
+  align-self: flex-start;
+}
+
+.message-bubble i {
+  margin-right: 10px;
+}
+.message-bubble {
+  display: flex;
+  align-items: center;
+}
+
+.message-bubble .material-icons {
+  margin-right: 10px;
+}
+
+.message-bubble .message-text {
+  display: inline-block;
+}
+
+
+.btn-primary {
+  background-color: #D2DA3A ;
+  border-color: #D2DA3A ;
+}
+
+.btn-secundary {
+  background-color: #2B9FE5 ;
+  border-color: #2B9FE5 ;
+  color: #fff;
+}
+
+.btn-secundary:hover {
+  background-color: #29a745;
+  border-color: #29a745;
+}
+
+.btn-primary:hover {
+  background-color: #29a745;
+  border-color: #29a745;
+}
+.form-control {
+  border-radius: 25px;
+}
