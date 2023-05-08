@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat GPT - Python</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="static/style.css"> <!-- Agrega esta línea para enlazar el archivo CSS -->
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="mb-0 text-center">OpenAI Chat con Python Flask</h4>
+            </div>
+            <div class="card-body">
+                <form action="/" method="post">
+                    <div class="form-group mb-0">
+                        <input type="text" class="form-control" placeholder="Escribe tu pregunta aquí" name="question">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block mt-3">Enviar</button>
+                    <button type="submit" class="btn btn-secundary btn-block mt-3" name="new_conversation" value="true">Nuevo chat</button>
+                </form>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">Respuestas</h5>
+            </div>
+            <div class="card-body chat-box">
+                {% for c in chat %}
+                {% if "Yo:" in c %}
+                <div class="message-row justify-content-end">
+                    <span class="message-bubble me">
+                        <i class="material-icons">account_circle</i>
+                        <span class="message-text">{{ c[4:] }}</span>
+                    </span>
+                </div>
+                {% elif "AI:" in c %}
+                <div class="message-row">
+                    <span class="message-bubble ai">
+                        <i class="material-icons">android</i>
+                        <span class="message-text">{{ c[4:] }}</span>
+                    </span>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://fonts.googleapis.com/icon?family=Material+Icons"></script>
+</html>
